@@ -7,15 +7,7 @@ import os
 
 # Set the static path to the model
 model_path = "pages/diamond price prediction model 2.pkl"
-
-# Check if the model file exists
-if os.path.exists(model_path):
-    # Load the model
-    model = joblib.load(model_path)
-    st.success("Model loaded successfully!")
-else:
-    st.error(f"Model file not found at: {model_path}")
-
+model = joblib.load(model_path)
 
 tab1, tab2 = st.tabs(["Project", "Theory"])
 
