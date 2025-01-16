@@ -5,13 +5,10 @@ from sklearn.preprocessing import OneHotEncoder
 import streamlit as st
 import os
 
-<<<<<<< HEAD
-model_path = r"E:\USERS\Desktop\C++\.vscode\projects\pages\diamond price prediction model 2.pkl"
-=======
-# Set the static path to the model
 model_path = "pages/diamond price prediction model 2.pkl"
->>>>>>> a3e2c65f28350303c73c4437c28a5b019040df5c
 model = joblib.load(model_path)
+
+tab1, tab2 = st.tabs(["Project", "Theory"])
 
 with tab1:
     st.title("Diamond Price Prediction App")
