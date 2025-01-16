@@ -6,7 +6,7 @@ import streamlit as st
 import os
 
 # Set the static path to the model
-model_path = r"E:\USERS\Desktop\C++\.vscode\Diamond-price-pred\pages\diamond price prediction model 2.pkl"
+model_path = "pages/diamond price prediction model 2.pkl"
 
 # Check if the model file exists
 if os.path.exists(model_path):
