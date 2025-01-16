@@ -5,10 +5,17 @@ from sklearn.preprocessing import OneHotEncoder
 import streamlit as st
 import os
 
-# Load the trained model
-uploaded_file = st.file_uploader("Upload your model file")
-if uploaded_file is not None:
-    model = joblib.load(uploaded_file)
+# Set the static path to the model
+model_path = r"E:\USERS\Desktop\C++\.vscode\Diamond-price-pred\pages\diamond price prediction model 2.pkl"
+
+# Check if the model file exists
+if os.path.exists(model_path):
+    # Load the model
+    model = joblib.load(model_path)
+    st.success("Model loaded successfully!")
+else:
+    st.error(f"Model file not found at: {model_path}")
+
 
 tab1, tab2 = st.tabs(["Project", "Theory"])
 
