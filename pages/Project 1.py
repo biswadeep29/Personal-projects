@@ -6,8 +6,9 @@ import streamlit as st
 import os
 
 # Load the trained model
-model_path = r"E:\USERS\Desktop\C++\.vscode\Diamond-price-pred\pages\diamond price prediction model 2.pkl"
-model = joblib.load(model_path)
+uploaded_file = st.file_uploader("Upload your model file")
+if uploaded_file is not None:
+    model = joblib.load(uploaded_file)
 
 tab1, tab2 = st.tabs(["Project", "Theory"])
 
