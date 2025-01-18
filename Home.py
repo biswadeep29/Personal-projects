@@ -20,8 +20,7 @@ st.write("Here are some of the projects I have worked on:")
 
 projects = [
     {"name": "Project 1 : Diamond Price Prediction Model", "description": "A basic model on price prediction using machine learning", "link": "https://i-like-riding-your-mom.streamlit.app/Project_1"},
-    {"name": "Project 2", "description": "Description of Project 2", "link": "https://project2-link.com"},
-    {"name": "Project 3", "description": "Description of Project 3", "link": "https://project3-link.com"},
+    {"name": "Project 2 : Land Terrain Classification Model", "description": "Land Terrain Classification using Deep Learning", "link": "https://i-like-riding-your-mom.streamlit.app/Project_2"}
 ]
 
 for project in projects:
@@ -39,4 +38,4 @@ Feel free to get in touch via:
 
 # Footer
 st.markdown("---")
-st.write("Made with ❤️ using Streamlit")
+st.write("Made with my ❤️ for YOUR MOM💦.")
