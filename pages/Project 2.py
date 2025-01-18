@@ -46,13 +46,11 @@ def compare(p1,p2):
 with tab1:
     st.subheader("Land Terrain Classification - CNN Model")
     
-    # File uploader for image input
     upload_img = st.file_uploader("Choose an image to upload", type=['png', 'jpg', 'jpeg', 'webp'])
     
     if upload_img:
         st.write("Image provided:")
         
-        # Progress bar for operation
         progress_text = "Operation in progress. Please wait."
         progress_bar = st.progress(0, text=progress_text)
         for percent_complete in range(1, 101):
@@ -61,7 +59,6 @@ with tab1:
         time.sleep(1)
         progress_bar.empty()
         
-        # Display the uploaded image
         st.image(upload_img, width=300)
         
         # Predictions using two models
@@ -69,20 +66,11 @@ with tab1:
         prediction_fine_tuned = predict_img(upload_img, model_fine)
         
         # Final prediction comparison
-        final_prediction = compare(prediction_data_aug, prediction_fine_tuned)
+        final_p = compare(prediction_data_aug, prediction_fine_tuned)
         
-        # Class labels
-        class_labels = {
-            0: 'buildings',
-            1: 'forest',
-            2: 'glacier',
-            3: 'mountain',
-            4: 'sea',
-            5: 'street'
-        }
+        class_labels =  {0: 'buildings',1: 'forest',2: 'glacier',3: 'mountain',4: 'sea',5: 'street'}
         
-        # Handle unclear or low-confidence predictions
-        if final_prediction[1] < 0.75:
+        if (final_p[1] < 0.75):
             st.warning(
                 f"The image might not be clear or may not belong to the categories: "
                 f"{', '.join(class_labels.values())}"
@@ -90,11 +78,7 @@ with tab1:
             st.write("Still, our prediction is:")
         
         # Display final prediction
-        st.success(
-            f"Predicted class: {class_labels[final_prediction[0]]} "
-            f"with probability: {final_prediction[1] * 100:.2f}%"
-        )
-
+        st.success(f'Predicted class: {final_p[0]} with probability: {final_p[1]*100:0.2f}')
 
 
 def display_theory_page():
