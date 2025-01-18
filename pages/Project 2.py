@@ -78,7 +78,7 @@ with tab1:
             st.write("Still, our prediction is:")
         
         # Display final prediction
-        st.success(f'Predicted class: {final_p[0]} with probability: {final_p[1]*100:0.2f}')
+        st.success(f'Predicted class: {final_p[0]} with probability: {final_p[1]*100:0.2f}%')
 
 
 def display_theory_page():
