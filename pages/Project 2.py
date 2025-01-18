@@ -7,10 +7,10 @@ import time
 
 tab1, tab2 = st.tabs(["Project", "Theory"])
 
-model_path = "pages\intel_model_data_aug.pkl"
+model_path = "pages/intel_model_data_aug.pkl"
 model_data_aug = joblib.load(model_path)
 
-model_path = "pages\intel_model_fine.pkl"
+model_path = "pages/intel_model_fine.pkl"
 model_fine = joblib.load(model_path)
 
 
