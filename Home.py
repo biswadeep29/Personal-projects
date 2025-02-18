@@ -11,7 +11,7 @@ st.write("Hi! I'm Biswadeep Mazumder. I'm passionate about ML/AI and your mom, a
 st.header("About Me")
 st.write("""
 I'm Biswadeep Mazumder, a 2nd year student JORHAT ENGINEERING COLLEGE.\n
-I enjoy riding YOUR MOM. Let's connect to create something amazing!
+Let's connect to create something amazing!
 """)
 
 # Projects Section
