@@ -35,7 +35,3 @@ Feel free to get in touch via:
 - Email: [biswadeepmazumder29@gmail.com](mailto:biswadeepmazumder29@gmail.com)
 - LinkedIn: [https://www.linkedin.com/in/biswadeep-mazumder-4b5819267/](https://www.linkedin.com/in/biswadeep-mazumder-4b5819267/)
 """)
-
-# Footer
-st.markdown("---")
-st.write("Made with my ❤️ for YOUR MOM💦.")
