@@ -1,69 +1,68 @@
-🔮 Streamlit ML Showcase: Diamond Pricing & Land Terrain Classification
-Welcome to my mini ML portfolio app built using Streamlit! This web app demonstrates two machine learning projects with interactive interfaces and real-time predictions.
+# 🔮 Streamlit ML Showcase  
+### Diamond Pricing & Land Terrain Classification
 
-🏠 Home Page
-Just a brief introduction about me — who I am, what I do, and why I love data. You'll get a feel for my work and this project at a glance.
+Welcome to my interactive **Streamlit** portfolio app — a minimalist yet powerful demonstration of two machine learning models in action. Real-time predictions, clean UI, and smart workflows, all rolled into one.
 
-💎 Project 1: Diamond Price Prediction
-A regression-based web app that estimates the price of a diamond based on various features such as:
+---
 
-Carat
+## 🏠 Home Page
 
-Cut
+A simple introduction about me — what I do, what I build, and why I love working with data. Think of it as the lobby to my machine learning museum.
 
-Color
+---
 
-Clarity
+## 💎 Project 1: Diamond Price Prediction
 
-Depth
+Ever wondered what a diamond is worth before walking into a store? This app estimates a diamond’s price based on key physical and quality attributes:
 
-Table
+- **Carat**
+- **Cut**
+- **Color**
+- **Clarity**
+- **Depth**
+- **Table**
+- **Length**, **Width**, and **Height**
 
-Dimensions (length, width, height)
+### 🧠 Under the Hood:
 
-🧠 Behind the Scenes:
-Model: Trained regression model (likely Linear Regression, XGBoost, etc.)
+- **Model:** A trained regression model (e.g., Linear Regression, XGBoost, etc.)
+- **Encoding:**
+  - `cut` is label-encoded.
+  - `color` and `clarity` are one-hot encoded using `OneHotEncoder`.
+- **UI:** Inputs collected via sliders and dropdowns using `st.form`.
+- **Output:** A precise price prediction shown instantly upon submission.
 
-Encoding:
+### 🧪 Try it out:
 
-cut encoded using label mapping
+Input values like:
+- `Carat: 0.79`
+- `Cut: Ideal`
+- `Color: G`
+- `Clarity: SI1`  
+...and get an instant estimate of your stone's market value.
 
-color and clarity encoded using OneHotEncoder
+---
 
-Input: Collected via st.form and sliders/dropdowns
+## 🌍 Project 2: Land Terrain Classification
 
-Output: Predicted price shown instantly after submission
+A vision-based classifier powered by **Convolutional Neural Networks (CNNs)** that predicts the type of landscape in an uploaded image. It supports classification into the following categories:
 
-🧪 Example:
-Enter values like a 0.79-carat diamond with Ideal cut, G color, SI1 clarity, and see the predicted price in real-time.
+- 🏙️ Buildings  
+- 🌳 Forest  
+- ❄️ Glacier  
+- 🏔️ Mountain  
+- 🌊 Sea  
+- 🛣️ Street  
 
-🌍 Project 2: Land Terrain Classification - CNN Model
-A classification model that takes an uploaded image and identifies the terrain type. It supports 6 classes:
+### 🧠 Model Workflow:
 
-Buildings
+- Two CNN models power the predictions:
+  - One trained with **data augmentation**
+  - Another **fine-tuned** for accuracy
+- Both outputs are compared for final prediction
+- A warning is displayed if confidence is low
+- Otherwise, you get a clean prediction with probability
 
-Forest
+### 🧪 Try it out:
 
-Glacier
-
-Mountain
-
-Sea
-
-Street
-
-🧠 Model Workflow:
-Two CNN models are used:
-
-One with data augmentation
-
-One fine-tuned for improved accuracy
-
-Predictions from both models are compared
-
-If confidence is low, a warning is shown
-
-Otherwise, the predicted class and probability are displayed
-
-🧪 Example:
-Upload a picture of a snowy area, and the model may predict “Glacier” with 93.12% confidence.
+Upload a photo of a snowy region — the model may identify it as “Glacier” with over **93% confidence**. Magic? Nah. Just machine learning.
